@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {IonicModule} from '@ionic/angular';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,10 @@ import {IonicModule} from '@ionic/angular';
 })
 export class AppComponent {
   title = 'logistica';
+
+  constructor(private router: Router){}
+
+  irA(ruta: string){
+    this.router.navigate([`/${ruta}`]);
+  }
 }
