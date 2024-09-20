@@ -15,13 +15,13 @@ export class LoginComponent  implements OnInit {
 
   constructor() {
     this.frmLogin = new FormGroup({
-      user: new FormControl('edwin@mail.com', Validators.required),
-      pass: new FormControl('1234', Validators.required)
+      user: new FormControl('', Validators.required),
+      pass: new FormControl('', Validators.required)
     })
   }
 
   login(){
-    console.log(this.frmLogin.value.user);
+    console.log(this.frmLogin.value);
   }
   ngOnInit() {}
 

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-button slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-button>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <div class="contacto-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Contáctanos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="frmContacto" (ngSubmit)="enviar()">
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input type="text" formControlName="nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Ciudad</ion-label>
+            <ion-input type="text" formControlName="ciudad"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Telefono</ion-label>
+            <ion-input type="text" formControlName="telefono"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Mensaje</ion-label>
+            <ion-input type="text" formControlName="mensaje"></ion-input>
+          </ion-item>
+          <ion-button (click)="enviar()">Enviar</ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
