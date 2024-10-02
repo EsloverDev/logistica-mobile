@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ApiService } from '../../service/api.service';
-import { IReqLogin } from '../../models/iReqLogin.interface';
+import { IReqLogin } from '../../models/IReqLogin.interface';
 import { HttpClientModule } from '@angular/common/http';
 
 @Component({
