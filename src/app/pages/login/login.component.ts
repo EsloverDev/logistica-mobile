@@ -27,7 +27,7 @@ export class LoginComponent  implements OnInit {
   login(form: IReqLogin){
     console.log(form);
     this.api.login(form).subscribe(datosRetorno => {
-      console.log(datosRetorno);
+    console.log(datosRetorno);
     })
   }
   ngOnInit() {}
