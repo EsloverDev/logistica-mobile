@@ -1,0 +1,21 @@
+<ion-content>
+    <ion-button *ngIf="turnOn == false" (click)="turnOnCamera()" expand="block" fill="clear" shape="round">
+        Encender camara
+    </ion-button>
+    <ion-button *ngIf="turnOn == true" (click)="turnOffCamera()" expand="block" fill="clear" shape="round">
+        Apagar camara
+    </ion-button>
+    <ion-button *ngIf="turnOn == true" (click)="takeAPicture()" expand="block" fill="clear" shape="round">
+        Tomar una foto
+    </ion-button>
+    <br/>
+    <br/>
+    <div id="camera-container"></div>
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col *ngFor="let img of album" size="4">
+                <img [src]="img" alt="">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
