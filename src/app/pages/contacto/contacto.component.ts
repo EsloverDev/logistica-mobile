@@ -31,7 +31,7 @@ export class ContactoComponent  implements OnInit {
     console.log(form);
     this.api.contacto(form).subscribe(datosRetorno => {
       console.log(datosRetorno);
-    })
+    }) 
    }
 
   ngOnInit() {}
